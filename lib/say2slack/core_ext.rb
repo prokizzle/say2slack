@@ -4,7 +4,7 @@ String.class_eval do
     obj.says(message)
   end
 
-  def to(channel='C03J89HD8')
+  def to_channel(channel='C03J89HD8')
     url = [self, "&channel=#{channel}"].join
     RestClient.post(URI.encode(url), {}, content_type: :json)
   end
