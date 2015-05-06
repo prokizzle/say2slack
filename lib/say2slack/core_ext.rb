@@ -1,4 +1,4 @@
-class String
+String.class_eval do
   def says(message)
     obj = Say2Slack::Main.new(self)
     obj.says(message)
