@@ -4,7 +4,7 @@ module Say2Slack
     def initialize(user)
       @user = user
       @token = ENV['SLACK_API_TOKEN'] || ""
-      @image = ENV['SLACK_BOT_IMG'] || ""
+      @image = ENV['SLACK_BOT_IMG'] || "http://i.imgur.com/EEdDLWz.png"
     end
 
     def says(message)
@@ -12,7 +12,8 @@ module Say2Slack
       return [
         "#{endpoint}?token=#{@token}",
         "username=#{@user}",
-        "text=#{message}"
+        "text=#{message}",
+        "icon_url=#{@image}",
       ].join("&")
     end
   end
