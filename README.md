@@ -26,6 +26,6 @@ Set environment variables for:
 
 Call from your code:
 
-`"FromName".says("Message").to("#roomName")`
+`"FromName".says("Message").to_channel("#roomName")`
 
 where FromName is who you want the message to be sent from, Message is the text you want posted to the channel, and roomName is the name of the channel you're posting to. roomName can also be a @user. In this instance, it appear in the slackbot thread.
