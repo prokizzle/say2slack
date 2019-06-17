@@ -16,5 +16,5 @@ Gem::Specification.new do |spec|
   spec.files         = `git ls-files`.split($/)
   spec.require_paths    = ["lib"]
 
-  spec.add_dependency "rest-client", "~> 1.8"
+  spec.add_dependency "rest-client", ">= 1.8", "< 3.0"
 end
